@@ -6,10 +6,6 @@ N, M = map(int, input().split())
 
 numList = list(map(int, input().split()))
 
-tempList = []
-for _ in range(M):
-    a, b = map(int, input().split())
-    tempList.append([a, b])
 
 prefixSum = [0] * N
 
@@ -23,9 +19,13 @@ for i in range(N): # 0 1 2 3 4
     else:
         prefixSum[i] = prefixSum[i-1] + numList[i]
 
+result = []
 for i in range(M):
-    a, b = tempList[i]
+    a, b = map(int, input().split())
     if a == 1:
-        print(prefixSum[b-1])
+        result.append(prefixSum[b-1])
     else:
-        print(prefixSum[b-1] - prefixSum[a-2])
+        result.append(prefixSum[b-1] - prefixSum[a-2])
+
+for rst in result:
+    print(rst)
