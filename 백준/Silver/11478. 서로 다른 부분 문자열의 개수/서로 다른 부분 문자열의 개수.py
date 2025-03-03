@@ -2,10 +2,11 @@
 
 myStr = input()
 myDict = {}
+mySet = set()
 
 for i in range(1, len(myStr) + 1):
     for j in range(len(myStr)):
         tempStr = myStr[j:j+i]
-        myDict[tempStr] = 1
+        mySet.add(tempStr)
 
-print(len(myDict.keys()))
+print(len(mySet))
