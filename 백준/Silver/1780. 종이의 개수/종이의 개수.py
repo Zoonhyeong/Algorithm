@@ -1,3 +1,7 @@
+# 1780 종이의 개수
+import sys
+
+input = sys.stdin.readline
 N = int(input())
 
 paper = [list(map(int, input().split())) for _ in range(N)]
