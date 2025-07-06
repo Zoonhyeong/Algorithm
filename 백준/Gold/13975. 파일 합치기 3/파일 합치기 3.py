@@ -14,12 +14,16 @@ for _ in range(T):
     K = int(input())
     chapter = list(map(int, input().split()))
 
-    heapq.heapify(chapter)
+    # heapq.heapify(chapter)
+    heap = []
+
+    for i in range(K):
+        heapq.heappush(heap, chapter[i])
 
     for i in range(K-1):
-        a = heapq.heappop(chapter)
-        b = heapq.heappop(chapter)
+        a = heapq.heappop(heap)
+        b = heapq.heappop(heap)
         temp += a+b
-        heapq.heappush(chapter, a+b)
+        heapq.heappush(heap, a+b)
 
     print(temp)
