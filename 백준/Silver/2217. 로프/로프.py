@@ -1,5 +1,8 @@
 # 2217 로프
 # k개 로프, 중량 w -> 각각엔 w/k
+import sys
+
+input = sys.stdin.readline
 
 N = int(input())
 
