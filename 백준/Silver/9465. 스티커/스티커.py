@@ -1,6 +1,6 @@
 # 9465 스티커
-# import sys
-# input = sys.stdin.readline
+import sys
+input = sys.stdin.readline
 
 T = int(input())
 
