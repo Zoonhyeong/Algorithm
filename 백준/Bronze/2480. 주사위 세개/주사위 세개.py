@@ -9,9 +9,4 @@ elif b == c and b != a:
 elif a == c and a != b:
     print(1000 + c * 100)
 else:
-    if a > b and a > c:
-        print(a * 100)
-    if b > a and b > c:
-        print(b * 100)
-    if c > a and c > b:
-        print(c * 100)
+    print(100 * max(a,b,c))
